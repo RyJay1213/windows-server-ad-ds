@@ -2,7 +2,7 @@
 This project demonstrates the deployment, network configuration and directory structure of a Windows Server 2025 Active Directory Domain Services environment (lab.internal) built in a home lab utilizing VMs.
 
 
-# Windows Server 2025 Active Directory (AD DS) Baseline & Automation Lab
+# Windows Server 2025 Active Directory ADDS Baseline & Automation Lab
 
 ## Project Overview
 This portfolio project demonstrates the end-to-end configuration of a Windows Server 2025 Active Directory Domain Services environment (`lab.internal`) hosted within a VMware Workstation virtualized lab. The project covers foundational systems administration tasks, including static network configuration, AD DS/DNS server role installation, automated bulk-user account provisioning using PowerShell, and network SMB share validation.
@@ -36,3 +36,9 @@ Executed PowerShell scripts using `Get-ADUser` to automate bulk account creation
 Configured enterprise file storage shares (`UserHomes`) and executed PowerShell validation checks testing local share availability (`Get-SmbShare`) and UNC network pathing (`\\DC1\UserHomes`).
 
 ![SMB Share Validation](./4-smb-share-hostname-validation.png)
+
+---
+
+## Code Attribution & Acknowledgments
+* **PowerShell Logic:** Built using standard Active Directory PowerShell Module cmdlets (`New-ADUser`, `Get-ADUser`) based on [Microsoft Learn ActiveDirectory Documentation](https://learn.microsoft.com/en-us/powershell/module/activedirectory/).
+* **Customizations:** Configured custom parameters, target OU Distinguished Name paths, and output filtering tailored to the `lab.internal` domain environment.
